@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workout Buddy</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script defer src="firebase-config.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Workout Buddy</h1>
+
+    <div id="auth">
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <button onclick="register()">Register</button>
+      <p id="authError"></p>
+    </div>
+
+    <div id="dashboard" style="display:none;">
+      <button onclick="logout()">Logout</button>
+      <h2>Workout Plan</h2>
+      <ul id="workoutList"></ul>
+      <button onclick="loadWorkout()">Load Workout</button>
+
+      <h2>Ask AI Trainer</h2>
+      <input type="text" id="userInput" placeholder="Ask something...">
+      <button onclick="askAI()">Send</button>
+      <div id="chatArea"></div>
+    </div>
+  </div>
+</body>
+</html>
