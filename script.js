@@ -52,7 +52,7 @@ function askAI() {
   fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
-      "Authorization": "Bearer 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",
+      "Authorization": "Bearer ",
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
